@@ -8,6 +8,7 @@ Source0:	http://ftp.de.debian.org/debian/pool/main/libc/libcaptury/%{name}_%{ver
 # Source0-md5:	6911c9965c6d765bd91200ab2f292634
 URL:		http://rm-rf.in/libcaptury
 BuildRequires:	capseo-devel
+BuildRequires:	xorg-lib-libXfixes-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
