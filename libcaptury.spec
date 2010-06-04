@@ -4,7 +4,7 @@ Version:	0.3.0
 Release:	3
 License:	GPL
 Group:		Libraries
-Source0:	http://ftp.de.debian.org/debian/pool/main/libc/libcaptury/%{name}_%{version}~svn158.orig.tar.gz
+Source0:	ftp://ftp.debian.org/debian/pool/main/libc/libcaptury/%{name}_%{version}~svn158.orig.tar.gz
 # Source0-md5:	6911c9965c6d765bd91200ab2f292634
 URL:		http://rm-rf.in/libcaptury
 BuildRequires:	capseo-devel
