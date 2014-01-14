@@ -1,13 +1,17 @@
 Summary:	X11/GLX video capturing framework
 Name:		libcaptury
 Version:	0.3.0
-Release:	3
+Release:	4
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.debian.org/debian/pool/main/libc/libcaptury/%{name}_%{version}~svn158.orig.tar.gz
 # Source0-md5:	6911c9965c6d765bd91200ab2f292634
+Patch0:		unresolved.patch
 URL:		http://rm-rf.in/libcaptury
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	capseo-devel
+BuildRequires:	libtool
 BuildRequires:	xorg-lib-libXfixes-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,8 +46,14 @@ Static libcaptury library.
 
 %prep
 %setup -q -n %{name}-%{version}~svn158.orig
+%patch0 -p1
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 %{__make}
 
@@ -62,6 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %ghost %{_libdir}/lib*.so.0
 
 %files devel
 %defattr(644,root,root,755)
