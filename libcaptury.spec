@@ -86,6 +86,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libcaptury.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -101,7 +104,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libcaptury.so
-%{_libdir}/libcaptury.la
 %{_includedir}/captury
 %{_pkgconfigdir}/libcaptury.pc
 
