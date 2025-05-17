@@ -5,10 +5,11 @@ Version:	0.3.0
 Release:	5
 License:	GPL v2
 Group:		Libraries
-Source0:	http://ftp.debian.org/debian/pool/main/libc/libcaptury/%{name}_%{version}~svn158.orig.tar.gz
+Source0:	http://archive.debian.org/debian/pool/main/libc/libcaptury/%{name}_%{version}~svn158.orig.tar.gz
 # Source0-md5:	6911c9965c6d765bd91200ab2f292634
 Patch0:		unresolved.patch
-URL:		http://rm-rf.in/libcaptury
+# dead (2025.05)
+#URL:		http://rm-rf.in/libcaptury
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	capseo-devel >= 0.1.0
