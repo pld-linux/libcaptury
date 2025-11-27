@@ -2,7 +2,7 @@ Summary:	X11/GLX video capturing framework
 Summary(pl.UTF-8):	Szkielet do przechwytywania obrazu z X11/GLX
 Name:		libcaptury
 Version:	0.3.0
-Release:	5
+Release:	6
 License:	GPL v2
 Group:		Libraries
 Source0:	http://archive.debian.org/debian/pool/main/libc/libcaptury/%{name}_%{version}~svn158.orig.tar.gz
